@@ -1,17 +1,15 @@
 'use strict';
 
 
-const creatureArray = [];
-const key = [];
+const keyArr = [];
 
 
-function Creature(image_url, title, description, keyword, horns) {
-  this.image_url = image_url;
-  this.title = title;
-  this.description = description;
-  this.keyword = keyword;
-  this.horns = horns;
-  creatureArray.push(this);
+function Creature(object) {
+  this.image_url = object.image_url;
+  this.title = object.title;
+  this.description = object.description;
+  this.keyword = object.keyword;
+  this.horns = object.horns;
 }
 
 Creature.prototype.render = function () {
@@ -26,23 +24,43 @@ Creature.prototype.render = function () {
 
 };
 
-$(document).ready(function () {
-  $.ajax('/data/page-1.json')
-    .then(data => {
-      data.forEach((obj, idx) => {
-        let creature = new Creature(obj.image_url, obj.title, obj.description, obj.keyword, obj.horns);
-        creature.render();
-      });
-    });
-});
-
-function dropDown() {
-  allcreatureObjs.forEach(animal => {
-    if (!key.includes(animal.keyword)) {
-      key.push(animal.keyword);
-    }
-  });
+function showImages() {
+  let $chosen = $(this).val();
+  if ($chosen === 'default') {
+    $('section').fadeIn();
+    $('.photo-template').hide();
+  } else {
+    $('section').hide();
+    $('.' + $chosen).fadeIn();
+  }
 }
 
+function appendDropDown(keyword) {
+  if (!keyArr.includes(keyword)) {
+    keyArr.push(keyword);
+  }
+}
+function appendToKeyArr() {
+  keyArr.sort();
+  for ( let i = 0; i < keyArr.length; i++) {
+    $('select').append(`<option value="${keyArr[i]}">${keyArr[i]}</option>`);
+  }
+}
 
+function loadData() {
+  $.ajax('/data/page-1.json')
+    .then(data => {
+      data.forEach((object, indx) => {
+        let creature = new Creature(object);
+        creature.render();
+        appendDropDown(object.keyword);
+      });
+      appendToKeyArr();
+    });
+}
+
+$(document).ready(function () {
+  $('select').on('change', showImages );
+  loadData();
+});
 
