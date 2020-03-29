@@ -1,0 +1,37 @@
+h1 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 100px;
+	text-align: center;
+	margin: auto;
+	}
+
+	header {
+		text-align: center;
+		margin: auto;
+		padding: 10px;
+	}
+
+
+	section {
+		font-family: 'Amatic SC', cursive;
+		text-align: center;
+		font-size: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-flow: column wrap;
+		align-content: center;
+	}
+		
+
+	img {
+		border: ridge 2px;
+		width: 260px;
+		max-height: 300px;
+	}
+
+	footer {
+		text-align: center;
+		height: 30px;
+		padding-top: 150px;
+	}
