@@ -3,34 +3,7 @@
 	box-sizing: border-box;
 }
 
-
-
 html {
 	margin: auto;
 	width: 960px;
 }
-
-main {
-	flex:1;
-}
-	
-	
-	h1 {
-	font-family: 'Dancing Script', cursive;
-	font-size: 50px;
-	text-align: center;
-	}
-
-	select {
-		margin: auto;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		margin-top: 1em; 
-		
-
-	}
-
-	footer {
-		text-align: center;
-	}
