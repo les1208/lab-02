@@ -1,44 +1,5 @@
 # Lab 02: jQuery Selectors and Events
 
-## Configuration
-
-_Your repository must include the following config files:_
-
-- `README.md` - with an overview of the project for a new visitor to your repo
-- `.gitignore` - with standard NodeJS configurations (see the provided `.gitignore` file)
-- `.eslintrc.json` - with Code 301 course standards for the linter (see the provided file in the *configs* folder of the class repo)
-
-- Organize your files into folders as you see fit. Here is an example file tree:
-
-```sh
-lab-02-repository
-├── css
-│   ├── base.css
-│   ├── layouts.css
-│   ├── modules.css
-│   └── reset.css
-├── data
-│   └── page-1.json
-├── index.html
-├── js
-│    └── app.js
-├── .eslintrc.json
-├── .gitignore
-└── README.md
-```
-
-## User Acceptance Tests
-
-### Overview
-
-In labs 2 and 3, you and your partner(s) will be using the provided JSON files to create a photo gallery. You will style it using floats.
-
-You have the option of using the provided `index.html` file, but it is not a requirement.
-
-## Resources
-
-- [page-1.json](./starter-code/page-1.json)
-- [index.html](./starter-code/index.html)
 
 ### Time Estimate
 
@@ -64,6 +25,16 @@ Add this information to your README.
 
 - As a user, I want to view the images on the page so that I can browse the photo collection.
 
+Number and name of feature: Feat Diplay images
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1830 3/25
+
+Finish time: 1300 3/28
+
+Actual time needed to complete: 10 hours
+
 #### What are we going to implement?
 
 Given that a user opens the application in the browser
@@ -85,14 +56,21 @@ Then the photo gallery should display all of the images in the gallery
 #### What are we going to implement?
 
 Given that a user clicks on the dropdown menu
-When the user selects one of the options
 Then only the images whose keyword matches the option should be displayed
 
 #### How are we implementing it?
 
 - Create a `<select>` element which contains unique `<option>` elements extracted dynamically from the JSON file, one for each keyword.
 - Use an event handler to respond when the user chooses an option from the select menu. Hide all of the images, then show those whose keyword matches the option chosen.
+Number and name of feature: Feat 2 Filter Images
 
+Estimate of time needed to complete: 4 hours
+
+Start time: 1830 3/25
+
+Finish time: 1300 3/28
+
+Actual time needed to complete: 
 ### Feature #3: Style the application
 
 #### Why are we implementing this feature?
@@ -126,3 +104,11 @@ Then the images should be sorted accordingly
 
 - Add the ability for the user to sort the images by either title or by number of horns.
 - Sort the images by one of the properties on page load. This should also apply to the second page of images.
+
+Number and name of feature: Feat 3 Style the application
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1830
+Finish time: 2000
+Actual time needed to complete: 2 1/2 
